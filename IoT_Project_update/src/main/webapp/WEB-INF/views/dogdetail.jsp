@@ -38,10 +38,22 @@
 							voluptate voluptatibus possimus, veniam magni quis!</p> -->
 							
 							
-						<a class="btn btn-warning" href="#!">사진 더보기-></a>
+						<!-- <a class="btn btn-warning" href="#!">사진 더보기-></a> -->
+				
 				
 				</div><!-- <div class="card-body"> 끝-->
+				
+				
+					
 			</div><!-- <div class="card mb-4"> 끝-->
+					<div style="text-align:center;">
+						<!-- <button type="submit" class="btn btn-warning" onclick="location.href='/remove'">삭제합니다</button> -->
+						<button type="submit" class="btn btn-outline-danger">삭제합니다</button>
+						<!-- 삭제처리를 위해  form 태그의 method 속성을 POST지정하고 submit 버튼 클릭시 Controller 에서 처리된다. -->
+		
+						<button type="button" class="btn btn-outline-primary" onclick="location.href='/doglist'">목록으로</button>
+						<!-- button의 onclick 속성은 redirect  개념으로 Controller에서 @GetMapping으로 처리 -->
+					</div>
 		</div><!-- <div class="col-lg-8"> 끝 -->
 			
 		<div class="col-lg-4">
@@ -62,7 +74,7 @@
 				<div class="card-header"><!-- 강아지 품종 --><c:out value="${detail.name }"/> 품종</div>
 				<%-- <div class="card-header"><!-- 강아지 품종 --> ${dog.name } 품종</div> --%>
                 <%--  <div class="card-body"><c:out value="${detail.kind }"/></div> --%>
-                <div class="card-body"><c:out value="${fn:split(list.kind,',')[0]}"/></div>
+                <div class="card-body"><c:out value="${fn:split(detail.kind,',')[0]}"/></div>
 			</div>
 			
 			<div class="card mb-4">
@@ -80,13 +92,13 @@
 			<div class="card mb-4">
 				<div class="card-header"><!-- 강아지 건강상태  --><c:out value="${detail.name }"/> 건강상태</div>
 				<%-- <div class="card-header"><!-- 강아지 건강상태  --> ${dog.name } 건강상태</div> --%>
-                <div class="card-body"><!-- 광견병 종합백신 --><c:out value="${detail.age }"/></div>
+                <div class="card-body"><!-- 광견병 종합백신 --><c:out value="${detail.health }"/></div>
 			</div>
 			
 			<div class="card mb-4">
-				<div classs="card-header"><c:out value="${detail.name }"/> 분양가격</div>
+				<div class="card-header"><c:out value="${detail.name }"/> 분양가격</div>
 				
-                <div class="card-body"><c:out value="${detail.price } 원"/></div>
+                <div class="card-body"><fmt:formatNumber value="${detail.price }" pattern="#,###,###"/> 원</div>
                 <%-- <div class="card-body"><fmt:formatNumber value="${detail.price }" pattern="#,###,###"/>">원</div> --%>
 			</div>
 		</div><!-- <div class="col-lg-4"> 끝-->
@@ -98,14 +110,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8">
-			<!-- <button type="submit" class="btn btn-warning" onclick="location.href='/remove'">삭제합니다</button> -->
-			<button type="submit" class="btn btn-warning">삭제합니다</button>
-			<!-- 삭제처리를 위해  form 태그의 method 속성을 POST지정하고 submit 버튼 클릭시 Controller 에서 처리된다. -->
 			
-			
-			
-			<button type="button" class="btn btn-success" onclick="location.href='/doglist'">목록으로</button>
-			<!-- button의 onclick 속성은 redirect  개념으로 Controller에서 @GetMapping으로 처리 -->
 		</div>
 	</div>
 </div>

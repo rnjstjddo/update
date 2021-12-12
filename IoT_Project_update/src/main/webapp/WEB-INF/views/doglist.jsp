@@ -154,13 +154,14 @@ $(document).ready(function(){
 						
 						<!-- <div class="card-body"> 안에 위치해야 한다. -->
 						
-						<!-- <p style="text-align:center;"> -->
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button data-oper='dogdetail' class="btn btn-outline-warning" onclick="location.href='/dogdetail?dno=<c:out value="${list.dno }"/>'">
-						상세보기</button>
-						<%-- <button type="submit" id="detailBtn" class="btn btn-outline-warning">상세보기</button>
-						<input type="hidden" value="<c:out value='${list.dno}'/>"> --%><!--${registerdno} 값으로는 페이지 이동불가 -->
-						<!-- <button type="submit" id="bagBtn" class="btn btn-outline-danger">장바구니담기</button> -->
-						<button type="submit" id="cartBtn" class="btn btn-outline-danger">장바구니담기</button>
+						<div style="text-align:center;">
+							<button data-oper='dogdetail' class="btn btn-outline-warning" onclick="location.href='/dogdetail?dno=<c:out value="${list.dno }"/>'">
+							상세보기</button>
+							<%-- <button type="submit" id="detailBtn" class="btn btn-outline-warning">상세보기</button>
+							<input type="hidden" value="<c:out value='${list.dno}'/>"> --%><!--${registerdno} 값으로는 페이지 이동불가 -->
+							<!-- <button type="submit" id="bagBtn" class="btn btn-outline-danger">장바구니담기</button> -->
+							<button type="submit" id="cartBtn" class="btn btn-outline-danger">장바구니담기</button>
+						</div>
 					</div>	
 				</div>
 			</div>		
