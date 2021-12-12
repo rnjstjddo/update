@@ -86,8 +86,8 @@ function file(){
 <br>
 
 <h2 class="panel-title" style="text-align:center; margin-bottom:30px; font-family:'Jua'; font-size:3.0em;">
-					<i class="fas fa-bullhorn"></i>&nbsp;&nbsp; 강아지 분양등록양식을 입력해주세요
-				</h2>
+	<i class="fas fa-bullhorn"></i>&nbsp;&nbsp; 강아지 분양등록양식을 입력해주세요
+</h2>
 <br>
 <br>
 

@@ -17,6 +17,16 @@
 <c:forEach> 설정하지 않아도된다. for문으로 돌리지 않고 등록글 한개의 컬럼=>프로퍼티만 가져올거니 사용하지 않는다 --%>
 <!-- JSTL 사용시 items과 var 속성을 반드시 있어야 한다. -->
 
+<br>
+<br>
+<br>
+<br>
+<h2 class="panel-title" style="text-align:center; margin-bottom:30px; font-family:'Jua'; font-size:3.0em;">
+	<i class="fas fa-bullhorn"></i>&nbsp;&nbsp; 분양 강아지 신상정보
+</h2> 
+
+<br>
+<br>
 <div class="container">
 	<div class="row">
 		<!-- Blog entries-->
@@ -29,31 +39,18 @@
 					<%-- <div class="card-header"><!-- 강아지 특징 -->${dog.name } 특징</div> --%>
 					<div class="card-header"><!-- 강아지 특징 --><c:out value="${detail.name }"/> 특징</div>
 	                <div class="card-body"><!-- 털이 많고 밝은 성격 --><c:out value="${detail.feature }"/></div>
-					
-						<!-- <div class="small text-muted">January 1, 2021</div>
-							<h2 class="card-title"></h2> 
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-							adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex
-							quis soluta, a laboriosam. Dicta expedita corporis animi vero
-							voluptate voluptatibus possimus, veniam magni quis!</p> -->
-							
-							
-						<!-- <a class="btn btn-warning" href="#!">사진 더보기-></a> -->
-				
-				
-				</div><!-- <div class="card-body"> 끝-->
-				
-				
-					
-			</div><!-- <div class="card mb-4"> 끝-->
-					<div style="text-align:center;">
-						<!-- <button type="submit" class="btn btn-warning" onclick="location.href='/remove'">삭제합니다</button> -->
-						<button type="submit" class="btn btn-outline-danger">삭제합니다</button>
-						<!-- 삭제처리를 위해  form 태그의 method 속성을 POST지정하고 submit 버튼 클릭시 Controller 에서 처리된다. -->
-		
-						<button type="button" class="btn btn-outline-primary" onclick="location.href='/doglist'">목록으로</button>
-						<!-- button의 onclick 속성은 redirect  개념으로 Controller에서 @GetMapping으로 처리 -->
-					</div>
+				</div><!-- <div class="card-body"> 끝-->				
+			</div>
+			<!-- <div class="card mb-4"> 끝-->
+			
+			<div style="text-align:center;">
+				<!-- <button type="submit" class="btn btn-warning" onclick="location.href='/remove'">삭제합니다</button> -->
+				<button type="submit" class="btn btn-outline-danger">삭제합니다</button>
+				<!-- 삭제처리를 위해  form 태그의 method 속성을 POST지정하고 submit 버튼 클릭시 Controller 에서 처리된다. -->
+
+				<button type="button" class="btn btn-outline-primary" onclick="location.href='/doglist'">목록으로</button>
+				<!-- button의 onclick 속성은 redirect  개념으로 Controller에서 @GetMapping으로 처리 -->
+			</div>
 		</div><!-- <div class="col-lg-8"> 끝 -->
 			
 		<div class="col-lg-4">
@@ -104,17 +101,8 @@
 		</div><!-- <div class="col-lg-4"> 끝-->
 	</div>	<!-- <div class="row"> 끝-->
 </div><!-- <div class="container">끝 -->
-
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8">
-			
-		</div>
-	</div>
-</div>
 </form>
+
 
 <br>
 <br>
@@ -127,16 +115,4 @@
 
 
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
-<!-- 
 
-<footer class="py-5 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright © Your Website 2021</p>
-	</div>
-</footer> 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-Core theme JS
-<script src="/resources/js/scripts.js"></script>
-
--->
